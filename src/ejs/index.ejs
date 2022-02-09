@@ -2,15 +2,8 @@
 <html lang="ja">
 <%- include('./common/_head') %>
   <body>
-    <%- include('./common/_top-header', {text:'ほおおおおおお'}) %>
-    <%- include('./component/_c-btn',{text:'これはテストですす', link:'#'}) %>
-    <%- include('./common/_footer') %>
-
-
-    <% for (var i=0; i < 4; i++) { %>
-      <%- include('./component/_c-btn',{text:'これはテストです', link:'#'}) %>
-      <% } %>
-
-
+    <%- include('./component/_c-btn',{text:'すべて見る', link:'#'}) %>
+    <%- include('./component/_c-btn-small',{text:'お知らせ', link:'#'}) %>
+    <%- include('./component/_c-btn',{text:'お問い合せへ', link:'#'}) %>
   </body>
 </html>

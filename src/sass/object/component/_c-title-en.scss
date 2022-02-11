@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.c-title-en {
+    font-weight: $regular;
+    font-family: $second-font-family;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    color: $yellow-dim;
+    opacity: 27%;
+}

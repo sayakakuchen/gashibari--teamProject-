@@ -1,0 +1,12 @@
+<%# 呼び出し元で type = '' とするとセクションタイトルとしてのクラス名は付与されないよ %>
+<%# 英語タイトルは装飾っぽいからspanタグにしてます %>
+
+<% if( type == 'section' && en_position == 'right' ) { %>
+    <%# セクションタイトルはこっち %>
+    <span class="p-section-title__en-right c-title-en"><%= title_en %></span>
+<% } else if( type == 'section' && en_position == 'left' ) { %>
+    <span class="p-section-title__en-left c-title-en"><%= title_en %></span>
+<% } else { %>
+    <%# ただのタイトルはこっち %>
+    <span class="c-title-en"><%= title_en %></span>
+<% } %>

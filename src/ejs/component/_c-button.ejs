@@ -1,0 +1,19 @@
+<%# 呼び出し元で指定したtypeによってテキスト・クラス名が変わるよ %>
+<%# type : all / more / contact %>
+
+<% switch ( type ) {
+    case 'all':
+        text = 'すべて見る';
+        class_name = 'c-button c-all-button';
+        break;
+    case 'more':
+        text = '詳しく見る';
+        class_name = 'c-button c-more-button';
+        break;
+    case 'contact':
+        text = 'お問い合わせ';
+        class_name = 'c-button c-contact-button';
+        break;
+} %>
+
+<a href="<%= link %>" class="<%= class_name %>"><%= text %></a>

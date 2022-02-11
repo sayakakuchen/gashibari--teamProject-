@@ -2,13 +2,27 @@
 <html lang="ja">
 <%- include('./common/_head') %>
   <body>
-    <%- include('component/_c-button',{type: 'all', link: '#'}) %>
-    <%- include('component/_c-button',{type: 'more', link: '#'}) %>
-    <%- include('component/_c-button',{type: 'contact', link: '#'}) %>
+    <div class="p-canvas">
+      <div class="l-inner">
+        <%- include('component/_c-button',{type: 'all', link: '#'}) %>
+        <%- include('component/_c-button',{type: 'more', link: '#'}) %>
+        <%- include('component/_c-button',{type: 'contact', link: '#'}) %>
 
-    <%- include('component/_c-button',{type: 'all', link: '#'}) %>
+      
+        <%- include('project/_p-section-title',{title_ja: '事業内容', title_en: 'Content', en_position: 'left'}) %>
 
-    
+        <%- include('project/_p-section-title',{title_ja: '制作実績', title_en: 'Works', en_position: 'right'}) %>
+
+        <%- include('project/_p-section-title',{title_ja: '企業概要', title_en: 'Overview', en_position: 'left'}) %>
+
+        <%- include('project/_p-section-title',{title_ja: 'ブログ', title_en: 'Blog', en_position: 'right'}) %>
+
+        <%- include('project/_p-section-title',{title_ja: 'お問い合わせ', title_en: 'Contact', en_position: 'left'}) %>
+      
+      
+        <%- include('component/_c-title-ja',{type: '', title_ja: 'ヤッタァぁぁあああ'}) %>
+      </div>
+    </div>
     
   </body>
 </html>

@@ -1,11 +1,5 @@
 @use "global" as *;
 
-// 後で消す
-body {
-	background-color: $black;
-}
-// 絶対消す
-
 .c-button {
     position: relative;
     display: inline-block;
@@ -44,7 +38,6 @@ body {
 .c-button:hover:before {
     transform: translateX(0);
 }
-
 
 .c-all-button {
     @extend .c-button;

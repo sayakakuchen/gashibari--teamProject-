@@ -1,10 +1,9 @@
 <%# type = '' とするとセクションタイトルとしてのクラス名は付与されないよ %>
-<%# 英語タイトルは装飾っぽいからspanタグにしてます %>
 
 <% if( type == 'section' ) { %>
     <%# セクションタイトルはこっち %>
-    <span class="p-section-title__english c-title-english"><%= title_english %></span>
+    <h2 class="p-section-title__ja c-title-ja"><%= title_ja %></h2>
 <% } else { %>
     <%# ただのタイトルはこっち %>
-    <span class="c-title-english"><%= title_english %></span>
+    <h2 class="c-title-ja"><%= title_ja %></h2>
 <% } %>

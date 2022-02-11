@@ -1,1 +1,56 @@
 @use "global" as *;
+
+.p-section-title {
+    margin: 100px 0; //仮
+    position: relative;
+    text-align: center;
+    @include mq(md){
+        padding-bottom: rem(48);
+    }
+}
+
+// Contactだけちょっと違う
+.p-section-title:last-of-type {
+    @include mq(md){
+        padding-bottom: rem(10);
+    }
+}
+
+
+.p-section-title__ja {
+    font-size: rem(20);
+    @include mq(md){
+        font-size: rem(30);
+    }
+}
+
+.p-section-title__en {
+    position: absolute;
+    bottom: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: rem(50);
+    @include mq(md){
+        font-size: rem(110);
+    }
+}
+
+.p-section-title__en-right {
+    @extend .p-section-title__en;
+    @include mq(md){
+        text-align: right;
+        right: 0;
+        bottom: 0;
+        transform: none;
+    }
+}
+
+.p-section-title__en-left {
+    @extend .p-section-title__en;
+    @include mq(md){
+        text-align: left;
+        left: 0;
+        bottom: 0;
+        transform: none;
+    }
+}

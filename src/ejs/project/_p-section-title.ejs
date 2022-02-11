@@ -1,4 +1,7 @@
+<%# 呼び出し元では、title_jaとtitle_enを引数に設定する %>
+<%# en_positionによって英語タイトルの配置が分かれるよ %>
+
 <div class="p-section-title">
-    <%- include('../component/_c-title-japanese',{type: 'section', title_japanese: title_japanese}) %>
-    <%- include('../component/_c-title-english',{type: 'section', title_english: title_english}) %>
+    <%- include('../component/_c-title-ja',{type: 'section', title_ja: title_ja}) %>
+    <%- include('../component/_c-title-en',{type: 'section', title_en: title_en, en_position: en_position}) %>
 </div>

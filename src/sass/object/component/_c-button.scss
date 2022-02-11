@@ -1,0 +1,104 @@
+@use "global" as *;
+
+// 後で消す
+body {
+	background-color: $black;
+}
+// 絶対消す
+
+.c-button {
+    position: relative;
+    display: inline-block;
+    padding: rem(10) 0;
+    font-size: rem(20);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $white;
+    line-height: 1;
+    letter-spacing: 0.125em;
+    text-align: center;
+    overflow: hidden;
+    @include mq(md){
+      font-size: rem(16);
+      font-weight: $normal;
+    }
+}
+
+.c-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $white;
+    transform: translateX(-100%);
+    transition: 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.c-button:hover {
+    color: $gray;
+}
+
+.c-button:hover:before {
+    transform: translateX(0);
+}
+
+
+.c-all-button {
+    @extend .c-button;
+    width: 100%;
+    max-width: rem(335);
+    border: rem(1) solid $white;
+    @include mq(md){
+      padding: rem(7) 0;
+      max-width: rem(134);
+      color: $black;
+      border: 0;
+      background-color: $white;
+    }
+}
+
+.c-all-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $gray;
+    transform: translateX(-100%);
+    transition: 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.c-all-button:hover {
+    color: $white;
+}
+
+.c-button:hover:before {
+    transform: translateX(0);
+}
+
+.c-more-button {
+    @extend .c-button;
+    width: 100%;
+    max-width: rem(335);
+    color: $white; 
+    border: rem(1) solid $white;
+    @include mq(md){
+      padding: rem(21) 0;
+    }
+}
+
+.c-contact-button {
+    @extend .c-button;
+    width: 100%;
+    max-width: rem(335);
+    color: $white; 
+    border: rem(1) solid $white;
+    @include mq(md){
+      padding: rem(21) 0;
+    }
+  }

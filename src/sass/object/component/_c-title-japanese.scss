@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.c-title-japanese {
+    font-weight: $regular;
+    font-family: $base-font-family;
+    line-height: 1;
+    letter-spacing: 0.125em;
+    color: $white;
+}

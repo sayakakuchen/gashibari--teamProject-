@@ -1,0 +1,9 @@
+<%# type = '' とするとセクションタイトルとしてのクラス名は付与されないよ %>
+
+<% if( type == 'section' ) { %>
+    <%# セクションタイトルはこっち %>
+    <h2 class="p-section-title__japanese c-title-japanese"><%= title_japanese %></h2>
+<% } else { %>
+    <%# ただのタイトルはこっち %>
+    <h2 class="c-title-japanese"><%= title_japanese %></h2>
+<% } %>

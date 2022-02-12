@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-section-title {
-    margin: 100px 0; //仮
+    // margin: 100px 0; //仮
     position: relative;
     text-align: center;
     @include mq(md){
@@ -9,8 +9,10 @@
     }
 }
 
-// Contactだけちょっと違うから
-.p-section-title:last-of-type {
+// 二つ目のレイアウト（Contactとか）
+.p-section-title-second {
+    position: relative;
+    text-align: center;
     @include mq(md){
         padding-bottom: rem(10);
     }

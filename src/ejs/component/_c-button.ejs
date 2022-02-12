@@ -1,5 +1,5 @@
-<%# 呼び出し元で指定したtypeによってテキスト・クラス名が変わるよ %>
-<%# type : all / more / contact %>
+<%# 呼び出し元では、type / link に引数を設定する %>
+<%# type = all : すべて見る / more : 詳しく見る / contact : お問い合わせへ %>
 
 <% switch ( type ) {
     case 'all':
@@ -11,7 +11,7 @@
         class_name = 'c-button c-more-button';
         break;
     case 'contact':
-        text = 'お問い合わせ';
+        text = 'お問い合わせへ';
         class_name = 'c-button c-contact-button';
         break;
 } %>

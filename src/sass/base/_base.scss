@@ -2,6 +2,9 @@
 @use "global" as *;
 
 html {
+  background-color: $black;
+  color: $white; //残す？
+
   //~375px
   @media (max-width: 375px) {
     font-size: vw(375, 16);

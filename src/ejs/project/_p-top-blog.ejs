@@ -1,0 +1,34 @@
+<section class="l-top-blog p-top-blog">
+  <div class="l-inner">
+    <%- include('_p-section-title',{title_ja: 'ブログ', title_en: 'Blog', en_position: 'right', layout_flg: 0}) %>
+    <div class="p-top-blog__cards">
+      <%- include('_p-card',{
+        img_src   : 'images/blog-img01.jpg',
+        img_alt   : 'アイキャッチ',
+        title     : 'タイトルが入ります。タイトルが入ります。',
+        caption   : '説明文が入ります。説明文が入ります。説明文が入ります。',
+        category  : 'カテゴリ',
+        date      : '2021.07.20',
+        add_class : 'p-top-blog__card'
+      }) %>
+      <%- include('_p-card',{
+        img_src   : 'images/blog-img02.jpg',
+        img_alt   : 'アイキャッチ',
+        title     : 'タイトルが入ります。タイトルが入ります。',
+        caption   : '説明文が入ります。説明文が入ります。説明文が入ります。',
+        category  : 'カテゴリ',
+        date      : '2021.07.20',
+        add_class : 'p-top-blog__card'
+      }) %>
+      <%- include('_p-card',{
+        img_src   : 'images/blog-img03.jpg',
+        img_alt   : 'アイキャッチ',
+        title     : 'タイトルが入ります。タイトルが入ります。',
+        caption   : '説明文が入ります。説明文が入ります。説明文が入ります。',
+        category  : 'カテゴリ',
+        date      : '2021.07.20',
+        add_class : 'p-top-blog__card'
+      }) %>
+    </div>
+  </div>
+</section>

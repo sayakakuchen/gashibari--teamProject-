@@ -1,5 +1,6 @@
 @use "global" as *;
 
+// ボタン共通
 .c-button {
     position: relative;
     display: inline-block;
@@ -7,10 +8,10 @@
     font-size: rem(20);
     font-weight: $regular;
     font-family: $base-font-family;
-    color: $white;
     line-height: 1;
     letter-spacing: 0.125em;
     text-align: center;
+    border: rem(1) solid $white;
     overflow: hidden;
     @include mq(md){
       font-size: rem(16);
@@ -25,25 +26,19 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: $white;
     transform: translateX(-100%);
     transition: 0.3s ease-in-out;
     z-index: -1;
-}
-
-.c-button:hover {
-    color: $gray;
 }
 
 .c-button:hover:before {
     transform: translateX(0);
 }
 
-.c-all-button {
-    @extend .c-button;
+// すべて見るボタン //
+.c-button-all {
     width: 100%;
     max-width: rem(335);
-    border: rem(1) solid $white;
     @include mq(md){
       padding: rem(7) 0;
       max-width: rem(134);
@@ -53,45 +48,52 @@
     }
 }
 
-.c-all-button:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+// スワイプの背景色
+.c-button-all:before {
     background-color: $gray;
-    transform: translateX(-100%);
-    transition: 0.3s ease-in-out;
-    z-index: -1;
 }
 
-.c-all-button:hover {
+// ホバー時の文字色
+.c-button-all:hover {
     color: $white;
 }
 
-.c-button:hover:before {
-    transform: translateX(0);
-}
-
-.c-more-button {
-    @extend .c-button;
+// 詳しく見るボタン //
+.c-button-more {
     width: 100%;
     max-width: rem(335);
     color: $white; 
-    border: rem(1) solid $white;
     @include mq(md){
       padding: rem(21) 0;
     }
 }
 
-.c-contact-button {
-    @extend .c-button;
+// スワイプの背景色
+.c-button-more:before {
+    background-color: $white;
+}
+
+// ホバー時の文字色
+.c-button-more:hover {
+    color: $gray;
+}
+
+// お問い合わせへボタン //
+.c-button-contact {
     width: 100%;
     max-width: rem(335);
     color: $white; 
-    border: rem(1) solid $white;
     @include mq(md){
       padding: rem(21) 0;
     }
-  }
+}
+
+// スワイプの背景色
+.c-button-contact:before {
+    background-color: $white;
+}
+
+// ホバー時の文字色
+.c-button-contact:hover {
+    color: $gray;
+}

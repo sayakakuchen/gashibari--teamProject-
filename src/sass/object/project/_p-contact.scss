@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.p-contact {
+  position: relative;
+  width: 100%;
+  padding: rem(67) 0 rem(64);
+  text-align: center;
+  
+  @include mq(md){
+    padding: rem(148) 0 rem(149);
+  }
+}
+
+.p-contact:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $light-gray;
+  z-index: -2;
+}
+
+.p-contact__text {
+  margin-top: rem(20);
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+  letter-spacing: 0.125em;
+  line-height: 1;
+  color: $white;
+  @include mq(md){
+    margin-top: rem(24);
+  }
+}
+
+.p-contact__button {
+  margin-top: rem(40);
+  @include mq(md){
+    margin-top: rem(61);
+  }
+}

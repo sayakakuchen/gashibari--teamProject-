@@ -1,23 +1,15 @@
 @use "global" as *;
 
 .p-section-title {
-    // margin: 100px 0; //仮
     position: relative;
     text-align: center;
-    @include mq(md){
-        padding-bottom: rem(48);
-    }
 }
 
 // 二つ目のレイアウト（Contactとか）
 .p-section-title-second {
     position: relative;
     text-align: center;
-    @include mq(md){
-        padding-bottom: rem(10);
-    }
 }
-
 
 .p-section-title__ja {
     font-size: rem(20);
@@ -37,22 +29,42 @@
     }
 }
 
-.p-section-title__en-right {
+.p-section-title .p-section-title__en-right {
     @extend .p-section-title__en;
     @include mq(md){
         text-align: right;
+        top: -100%;
         right: 0;
-        bottom: 0;
         transform: none;
     }
 }
 
-.p-section-title__en-left {
+.p-section-title .p-section-title__en-left {
     @extend .p-section-title__en;
     @include mq(md){
         text-align: left;
+        top: -100%;
         left: 0;
-        bottom: 0;
+        transform: none;
+    }
+}
+
+.p-section-title-second .p-section-title__en-right {
+    @extend .p-section-title__en;
+    @include mq(md){
+        text-align: right;
+        bottom: -30%;
+        right: 0;
+        transform: none;
+    }
+}
+
+.p-section-title-second .p-section-title__en-left {
+    @extend .p-section-title__en;
+    @include mq(md){
+        text-align: left;
+        bottom: -30%;
+        left: 0;
         transform: none;
     }
 }

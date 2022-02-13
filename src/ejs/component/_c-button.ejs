@@ -1,19 +1,22 @@
-<%# 呼び出し元では、type / link に引数を設定する %>
-<%# type = all : すべて見る / more : 詳しく見る / contact : お問い合わせへ %>
+<%# 引数① : type → ボタンの機能を指定 %>
+    <%# → all : すべて見る / more : 詳しく見る / contact : お問い合わせへ / '' : ただのボタン %>
+<%# 引数② : link → リンク先を指定 %>
+<%# 引数③ : text → ボタンのテキストを指定 %>
 
 <% switch ( type ) {
     case 'all':
-        text = 'すべて見る';
-        class_name = 'c-button c-all-button';
+        class_name = 'c-button c-button-all';
         break;
     case 'more':
-        text = '詳しく見る';
-        class_name = 'c-button c-more-button';
+        class_name = 'c-button c-button-more';
         break;
     case 'contact':
-        text = 'お問い合わせへ';
-        class_name = 'c-button c-contact-button';
+        class_name = 'c-button c-button-contact';
         break;
-} %>
+    case '':
+        class_name = 'c-button';
+        break;
+    }
+%>
 
 <a href="<%= link %>" class="<%= class_name %>"><%= text %></a>

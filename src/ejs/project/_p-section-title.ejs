@@ -1,6 +1,7 @@
-<%# 呼び出し元では、title_ja / title_en / en_position / layout_flg に引数を設定する %>
-<%# en_positionによって英語タイトルの配置が変わるよ %>
-<%# layout_flg = 0 : メインのレイアウト、1 : 二つ目のレイアウト（Contactと同じ）になるよ %>
+<%# 引数① : title_ja    → 日本語タイトル %>
+<%# 引数② : title_en    → 英語タイトル %>
+<%# 引数③ : en_position → 英語の位置 left / right %>
+<%# 引数④ : layout_flg  → 0 : 通常、1 : 二つ目のレイアウト(Contact) %>
 
 <% switch ( layout_flg ) {
     case 0:

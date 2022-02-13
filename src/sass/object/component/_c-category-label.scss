@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.c-category-label {
+  padding: rem(3) rem(5);
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $normal;
+  letter-spacing: 0.0625em;
+  line-height: 1.85;
+  color: $black;
+  background-color: $yellow-bright;
+}

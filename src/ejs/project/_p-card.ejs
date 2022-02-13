@@ -1,0 +1,34 @@
+<%# 引数① : img_src   → カードの画像のパス %>
+<%# 引数② : img_alt   → カードの画像のalt %>
+<%# 引数③ : title     → カードのタイトル %>
+<%# 引数④ : caption   → 説明文 %>
+<%# 引数⑤ : category  → カテゴリー %>
+<%# 引数⑥ : date      → 日付 %>
+<%# 引数⑦ : add_class → 追加したいクラス名（追加しない場合は''とする） %>
+<% if( add_class != '' ) { %>
+  <%  class_name = add_class + ' ' + 'p-card' %>
+<% } else { %>
+  <%  class_name = 'p-card' %>
+<% } %>
+
+
+<a href="#" class= "<%= class_name %>">
+  <div class="p-card__image">
+    <img src="<%= img_src %>" alt="<%= img_alt %>">
+  </div>
+  <div class="p-card__body">
+    <p class="p-card__title">
+      <%= title %>
+    </p>
+    <p class="p-card__caption">
+      <%= caption %>
+    </p>
+    <div class="p-card__bottom">
+      <div class="p-card__label">
+        <span class="c-category-label"><%= category %></span>
+      </div>
+      <time class="p-card__date"><%= date %></time>
+    </div>
+  </div>
+
+</a>

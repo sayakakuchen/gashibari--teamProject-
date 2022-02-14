@@ -2,9 +2,9 @@
 
 .c-mark-circle {
   display: inline-block;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
+  width: rem(60);
+  height: rem(60);
+  line-height: rem(60);
   color: $gray;
   text-align: center;
   background-color: $orange;

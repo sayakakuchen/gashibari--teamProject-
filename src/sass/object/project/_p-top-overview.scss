@@ -1,0 +1,93 @@
+@use "global" as *;
+
+.p-top-overview {
+
+}
+
+.p-top-overview__container {
+  position: relative;
+  margin-top: rem(48);
+  width: 100%;
+  @include mq(md){
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: rem(42);
+    padding: rem(80) 0;
+  }
+}
+
+.p-top-overview__container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 calc( 50% - 50vw );
+  width: 100vw;
+  height: 100%;
+  background-color: $gray;
+  z-index: -1;
+  @include mq(md){
+    width: 70vw;
+  }
+}
+
+.p-top-overview__image {
+  margin: 0 calc( 50% - 50vw );
+  @include mq(md){
+    margin: 0;
+    width: 49%;
+  }
+}
+
+.p-top-overview__image img {
+  width: 100%;
+}
+
+.p-top-overview__content {
+  padding: rem(24) 0 rem(21);
+  @include mq(md){
+    width: 51%;
+  }
+}
+
+.p-top-overview__title {
+  text-align: center;
+  font-family: $base-font-family;
+  font-size: rem(20);
+  font-weight: $regular;
+  letter-spacing: 0.125em;
+  line-height: 1;
+  color: $white;
+  @include mq(md){
+    font-size: rem(25);
+    line-height: 1.66;
+    letter-spacing: 0.03125em;
+    text-align: left;
+  }
+}
+
+.p-top-overview__text {
+  margin-top: rem(24);
+  padding-right: rem(10);
+  text-align: left;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+  letter-spacing: 0.125em;
+  line-height: 1.5;
+  color: $white;
+  @include mq(md){
+    line-height: 2.1875;
+    letter-spacing: 0.03125em;
+  }
+}
+
+.p-top-overview__button {
+  margin-top: rem(32);
+  text-align: center;
+  @include mq(md){
+    margin-top: rem(48);
+    text-align: left;
+  }
+}

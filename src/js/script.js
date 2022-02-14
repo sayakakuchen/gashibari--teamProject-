@@ -49,6 +49,24 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     return false;
   });
 
+  // Swiper
+  let mySwiper = new Swiper ('.swiper-container', {
+    speed: 400,
+    loop: true, //最後に達したら先頭に戻る
+    slidesPerView: 1,
+    loopedSlides: 3,
+    centeredSlides: true,
+    autoplay: {
+      delay: 5000
+    },
+    //ページネーション表示の設定
+    pagination: { 
+      el: '.swiper-pagination', //ページネーションの要素
+      type: 'bullets', //ページネーションの種類
+      clickable: true, //クリックに反応させる
+    },
+  })
+
 
 
 });

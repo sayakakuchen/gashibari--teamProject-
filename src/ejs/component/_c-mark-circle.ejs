@@ -1,0 +1,9 @@
+<%# 引数① : add_class → 追加したいクラス名（追加しない場合は''とする） %>
+<% if( add_class != '' ) { %>
+  <%  class_name = add_class + ' ' + 'c-mark-circle' %>
+<% } else { %>
+  <%  class_name = 'c-mark-circle' %>
+<% } %>
+<%# 引数② : text → マークのテキスト %>
+
+<span class="<%= class_name %>"><%= text %></span>

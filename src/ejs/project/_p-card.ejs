@@ -11,18 +11,22 @@
   <%  class_name = 'p-card' %>
 <% } %>
 
-
 <a href="#" class= "<%= class_name %>">
+  <% if( new_flg == 1 ) { %>
+    <%- include('../component/_c-mark-circle',{add_class: 'p-card__mark', text: 'New'}) %>
+  <% } %>
   <div class="p-card__image">
     <img src="<%= img_src %>" alt="<%= img_alt %>">
   </div>
   <div class="p-card__body">
-    <p class="p-card__title">
-      <%= title %>
-    </p>
-    <p class="p-card__caption">
-      <%= caption %>
-    </p>
+    <div class="p-card__head">
+      <p class="p-card__title">
+        <%= title %>
+      </p>
+      <p class="p-card__caption">
+        <%= caption %>
+      </p>
+    </div>
     <div class="p-card__bottom">
       <div class="p-card__label">
         <span class="c-category-label"><%= category %></span>

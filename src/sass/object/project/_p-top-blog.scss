@@ -11,8 +11,7 @@
 
 .p-top-blog__card {
   @include mq(md){
-    flex-grow: 1;
-    max-width: calc(33.33333333% - 25px * 2 / 3);
+    width: calc(33.33333333% - 25px * 2 / 3); 
   }
 }
 

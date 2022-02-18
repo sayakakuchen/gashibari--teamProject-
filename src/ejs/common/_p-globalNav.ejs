@@ -1,0 +1,16 @@
+<% const navItems = [
+    {text:'お知らせ'},
+    {text:'事業内容'},
+    {text:'制作実績'},
+    {text:'企業概要'},
+    {text:'ブログ'},
+    {text:'お問い合わせ'}
+] %>
+
+<ul class="p-globalNav">
+   <% for( var item of navItems ){ %>
+    <li class="p-globalNav__menu">
+        <a href="#"><%= item.text %></a>
+    </li>
+    <% } %>
+</ul>

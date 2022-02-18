@@ -1,0 +1,29 @@
+@use 'global' as *;
+@use 'sass:math';
+
+.p-top {
+    background-color: $black;
+}
+
+.p-top__inner {
+    @include mq(md) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.p-top__news {
+    @include mq(md) {
+        width: calc(100% - #{rem(185)});
+        margin-right: rem(50);
+    }
+}
+
+.p-top__button {
+    text-align: center;
+    margin-top: rem(28);
+    @include mq(md) {
+        width: rem(135);
+        margin-top: 0;
+    }
+}

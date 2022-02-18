@@ -1,0 +1,79 @@
+@use 'global' as *;
+@use 'sass:math';
+
+.p-header {
+    height: rem(50);
+    background-color: rgba($color: #111111, $alpha: 0.5);
+}
+
+.p-header__inner {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding-left: 22px;
+    padding-right: 0;
+    @include mq(md) {
+        padding-left: 32px;
+    }
+}
+
+.p-header__logo {
+    width: rem(70);
+    height: auto;
+    z-index: 1000;
+    @include mq(md) {
+        width: rem(94);
+    }
+}
+
+.p-header__globalNav {
+    margin-left: auto;
+    height: inherit;
+}
+
+.p-header__hamburger {
+    cursor: pointer;
+    position: relative;
+    height: inherit;
+    width: rem(68);
+    margin-left: auto;
+    z-index: 1000;
+}
+
+.p-header__hamburger span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: rem(24);
+    height: rem(2);
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.5s;
+}
+
+.p-header__hamburger span:first-child {
+    top: rem(15);
+}
+
+.p-header__hamburger span:nth-child(2) {
+    top: rem(22);
+}
+
+.p-header__hamburger span:last-child {
+    top: rem(29);
+}
+
+.p-header__hamburger.is-active span:first-child {
+    top: rem(22);
+    transform: translateX(rem(-12)) rotate(135deg);
+}
+
+.p-header__hamburger.is-active span:nth-child(2) {
+    opacity:0;
+}
+
+.p-header__hamburger.is-active span:last-child {
+    top: rem(22);
+    transform:translateX(rem(-12)) rotate(-135deg);
+}

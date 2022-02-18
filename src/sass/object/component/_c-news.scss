@@ -1,0 +1,43 @@
+@use 'global' as *;
+@use 'sass:math';
+
+.c-news {
+    @include mq(md) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.c-news p {
+    color: $white;
+}
+
+.c-news__meta {
+    display: flex;
+    align-items: center;
+
+    @include mq(md) {
+        width: rem(250);
+        margin-right: rem(40);
+    }
+}
+
+.c-news__date {
+    font-size: rem(16);
+    margin-right: rem(32);
+}
+
+.c-news__tag {
+    font-size: rem(14);
+    border: 1px solid $white;
+    padding: rem(5) rem(20);
+}
+
+.c-news__title {
+    margin-top: rem(16);
+
+    @include mq(md) {
+        width: calc(100% - #{rem(290)});
+        margin-top: 0;
+    }
+}

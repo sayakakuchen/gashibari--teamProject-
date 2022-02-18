@@ -1,0 +1,21 @@
+<% const menuItems = [
+    {text:'トップ'},
+    {text:'お知らせ'},
+    {text:'事業内容'},
+    {text:'制作実績'},
+    {text:'企業概要'},
+    {text:'ブログ'},
+    {text:'お問い合わせ'}
+] %>
+
+<div class="p-drawerMenu js-drawerMenu">
+    <div class="p-drawerMenu__inner l-inner">
+        <ul class="p-drawerMenu__menus">
+            <% for( var item of menuItems ){ %>
+            <li class="p-drawerMenu__menu">
+                <a href="#"><%= item.text %></a>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+</div>

@@ -2,14 +2,19 @@
 @use 'sass:math';
 
 .c-news {
-    @include mq(md) {
-        display: flex;
-        align-items: center;
-    }
+    
 }
 
 .c-news p {
     color: $white;
+}
+
+.c-news__inner {
+    display: block;
+    @include mq(md) {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .c-news__meta {
